@@ -118,8 +118,8 @@ accounts/credits. See the capability roadmap for details.
 
 If Nyrax saves you time, you can support its development:
 
-[![Saweria](https://img.shields.io/badge/Donasi_(IDR)-Saweria-FAAC2B.svg)](https://saweria.co/benosons)
-[![Ko-fi](https://img.shields.io/badge/Support_(USD)-Ko--fi-FF5E5B.svg?logo=ko-fi&logoColor=white)](https://ko-fi.com/benosons)
+[![Saweria](https://img.shields.io/badge/Dukungan_(IDR)-Saweria-FAAC2B.svg)](https://saweria.co/benosons)
+[![Ko-fi](https://img.shields.io/badge/Dukungan_(USD)-Ko--fi-FF5E5B.svg?logo=ko-fi&logoColor=white)](https://ko-fi.com/benosons)
 
 ## Credits
 
