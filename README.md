@@ -55,8 +55,10 @@ Built-in engine (no external tools needed): SQL injection (error / boolean /
 time-based), context-aware XSS, SSTI, OS command injection, path traversal / LFI,
 CRLF, open redirect, broken access control (IDOR/BOLA), CORS, TLS issues, exposed
 files, security-header and cookie gaps. It crawls (redirects, GET/POST forms,
-JS-bundle endpoints) and imports OpenAPI/Postman specs. Installed external tools
-(nuclei, sqlmap, dalfox, nikto, testssl, katana, httpx, subfinder) add more depth.
+JS-bundle endpoints), does content discovery (ffuf) and hidden-parameter discovery
+(arjun), and imports OpenAPI/Postman specs. Installed external tools add more depth —
+nuclei, sqlmap, dalfox, nikto, testssl, katana, httpx, subfinder, ffuf, arjun, and
+wpscan (run only when the target looks like WordPress).
 
 ## Authorization & legal
 

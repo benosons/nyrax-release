@@ -18,15 +18,23 @@ the work of its own authors, under its own license:
 | [httpx](https://github.com/projectdiscovery/httpx) | ProjectDiscovery | MIT |
 | [subfinder](https://github.com/projectdiscovery/subfinder) | ProjectDiscovery | MIT |
 | [dalfox](https://github.com/hahwul/dalfox) | hahwul | MIT |
+| [ffuf](https://github.com/ffuf/ffuf) | Joona Hoikkala | MIT |
+| [arjun](https://github.com/s0md3v/Arjun) | Somdev Sangwan | GPLv3 |
+| [wpscan](https://github.com/wpscanteam/wpscan) | WPScan Team | **WPScan Public Source License** (non-OSI; restricts commercial use) |
 | [sqlmap](https://github.com/sqlmapproject/sqlmap) | sqlmap project (B. Damele, M. Stampar) | GPLv2 |
 | [nikto](https://github.com/sullo/nikto) | Chris Sullo, David Lodge | GPLv2 |
 | [testssl.sh](https://github.com/testssl/testssl.sh) | Dirk Wetter | GPLv2 |
 
 Nyrax calls these tools **at arm's length** — as separate operating-system
 processes, parsing their text/JSON output. It does not copy, link, or embed their
-source code. Running GPL-licensed tools alongside AGPL-licensed Nyrax is *mere
+source code. Running these tools alongside AGPL-licensed Nyrax is *mere
 aggregation* and affects neither project's license. Always verify each tool's exact
 terms in its own repository before redistributing it.
+
+> **wpscan** is published under the WPScan Public Source License, which is **not** a
+> standard open-source license and restricts commercial use. Nyrax does not bundle or
+> redistribute wpscan; it only invokes a copy the user installs. If you use wpscan for
+> commercial work, review its license and obtain a WPScan API token/plan as required.
 
 ## Bundled libraries (compiled into the `nyx` binary)
 
