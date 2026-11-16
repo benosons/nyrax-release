@@ -43,15 +43,29 @@ scans on its own; optional external tools add depth (`nyx doctor` shows what's i
 ### Option: Docker (all tools included)
 
 For full depth without installing Go/Python/Ruby tools yourself, use the all-in-one image — every
-scanner Nyrax orchestrates is bundled:
+scanner Nyrax orchestrates is bundled. If you have Docker, the simplest way is the `--docker` flag:
 
 ```bash
-docker build -t nyrax .
-docker run --rm -v "$PWD:/work" nyrax scan https://example.com -o report.html
+nyx scan https://example.com --docker
 ```
 
-The report lands in the mounted folder. This is just an option; the standalone binary above is the
-default path.
+Nyrax pulls the published image and runs the scan inside it (reports land in the current folder). No
+Docker? The scan automatically falls back to the built-in engine. You can also run the image by hand:
+
+```bash
+docker run --rm -v "$PWD:/work" ghcr.io/benosons/nyrax:latest scan https://example.com -o report.html
+```
+
+This is just an option; the standalone binary above is the default path and needs no Docker.
+
+### Update
+
+```bash
+nyx update
+```
+
+Re-runs the installer to fetch the latest build. Nyrax also prints a hint after a scan when a newer
+version is available.
 
 ## Usage
 
@@ -99,6 +113,10 @@ Nyrax sends real attack payloads (SQL quotes, template expressions, sleep inject
 sequences). **Only scan systems you own or are explicitly authorized to test.** Scanning without
 permission is illegal in most jurisdictions. By default the tool refuses `localhost`, private IP
 ranges, and internal hostnames; use `--allowlist`/`--denylist` to scope engagements.
+
+Before each scan Nyrax asks you to confirm you have permission for the target. In automation (CI, a
+non-interactive shell) there is no prompt — pass `--yes` to confirm, and only for targets you are
+authorized to test.
 
 ## Development
 
